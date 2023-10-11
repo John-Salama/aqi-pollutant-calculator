@@ -136,5 +136,3 @@ If you encounter any issues or have suggestions for improvement, please open an 
 If you'd like to contribute to this project, feel free to submit a pull request. Your contributions are welcome!
 
 ---
-
-Feel free to customize this README according to your preferences and add any additional information that you think would be relevant for users of your package.
