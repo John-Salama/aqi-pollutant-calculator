@@ -134,5 +134,3 @@ If you encounter any issues or have suggestions for improvement, please open an 
 ## Contributing
 
 If you'd like to contribute to this project, feel free to submit a pull request. Your contributions are welcome!
-
----
