@@ -1,0 +1,140 @@
+Certainly, I'll add information about the units of measurement for each gas and the suggested unit in the README. Here's the updated README with the added information:
+
+# aqi - Calculate Air Quality Index (AQI)
+
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+## Introduction
+
+The `aqi` package is a simple Node.js library that calculates the Air Quality Index (AQI) for various air pollutants, including CO (Carbon Monoxide), PM2.5 (Particulate Matter), O3 (Ozone), PM10 (Particulate Matter), SO2 (Sulfur Dioxide), NO2 (Nitrogen Dioxide), and Lead (Pb). It provides a straightforward interface for converting pollutant concentrations into their respective AQI values.
+
+## Installation
+
+To install `aqi` in your Node.js project, you can use npm:
+
+```bash
+npm install aqi
+```
+
+## Usage
+
+Here's how you can use the `aqi` library in your Node.js code:
+
+```javascript
+const aqi = require("aqi");
+
+// Calculate the AQI for a specific pollutant concentration
+const coAQI = aqi.CO_AQI(4.0); // Concentration in ppm
+console.log("CO AQI:", coAQI);
+
+// Calculate the overall AQI for a set of gas concentrations
+const gasConcentration = {
+  co: 4.0, // Concentration in ppm
+  pm25: 15.0, // Concentration in µg/m³
+  ozone: 70.0, // Concentration in ppb
+  pm10: 30.0, // Concentration in µg/m³
+  so2: 20.0, // Concentration in ppb
+  no2: 40.0, // Concentration in ppb
+  lead: 0.2, // Concentration in µg/m³
+};
+const overallAQI = aqi.calculateAQI(gasConcentration);
+console.log("Overall AQI:", overallAQI);
+```
+
+The package provides functions for calculating the AQI for individual pollutants as well as a function for computing the overall AQI based on multiple pollutant concentrations.
+
+## Supported Pollutants
+
+- Carbon Monoxide (CO)
+  - Concentration unit: ppm (parts per million)
+- Particulate Matter (PM2.5)
+  - Concentration unit: µg/m³ (micrograms per cubic meter)
+- Ozone (O3)
+  - Concentration unit: ppb (parts per billion)
+- Particulate Matter (PM10)
+  - Concentration unit: µg/m³ (micrograms per cubic meter)
+- Sulfur Dioxide (SO2)
+  - Concentration unit: ppb (parts per billion)
+- Nitrogen Dioxide (NO2)
+  - Concentration unit: ppb (parts per billion)
+- Lead (Pb)
+  - Concentration unit: µg/m³ (micrograms per cubic meter)
+
+## AQI Ranges
+
+The `aqi` package uses the following AQI breakpoints and values for each pollutant:
+
+- CO AQI:
+
+  - Breakpoints: [0, 4.4, 9.4, 12.4, 15.4, 30.4, 40.4, 50.4]
+  - AQI Values: [0, 50, 100, 150, 200, 300, 400, 500]
+
+- PM2.5 AQI:
+
+  - Breakpoints: [0, 12.1, 35.5, 55.5, 150.5, 250.5, 350.5, 500.5]
+  - AQI Values: [0, 50, 100, 150, 200, 300, 400, 500]
+
+- Ozone AQI:
+
+  - Breakpoints: [0, 54, 70, 85, 105, 200, 270, 360]
+  - AQI Values: [0, 50, 100, 150, 200, 300, 400, 500]
+
+- PM10 AQI:
+
+  - Breakpoints: [0, 54, 154, 254, 354, 424, 504, 604]
+  - AQI Values: [0, 50, 100, 150, 200, 300, 400, 500]
+
+- SO2 AQI:
+
+  - Breakpoints: [0, 35, 75, 185, 304, 604, 804, 1004]
+  - AQI Values: [0, 50, 100, 150, 200, 300, 400, 500]
+
+- NO2 AQI:
+
+  - Breakpoints: [0, 53, 100, 360, 649, 1249, 1649, 2049]
+  - AQI Values: [0, 50, 100, 150, 200, 300, 400, 500]
+
+- Lead AQI:
+  - Breakpoints: [0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4]
+  - AQI Values: [0, 50, 100, 150, 200, 300, 400, 500]
+
+## Example
+
+Here's an example of how to calculate the AQI for multiple pollutants and compute the overall AQI:
+
+```javascript
+const aqi = require("aqi");
+
+const gasConcentration = {
+  co: 4.0, // Concentration in ppm
+  pm25: 15.0, // Concentration in µg/m³
+  ozone: 70.0, // Concentration in ppb
+  pm10: 30.0, // Concentration in µg/m³
+  so2: 20.0, // Concentration in ppb
+  no2: 40.0, // Concentration in ppb
+  lead: 0.2, // Concentration in µg/m³
+};
+
+const overallAQI = aqi.calculateAQI(gasConcentration);
+console.log("Overall AQI:", overallAQI);
+```
+
+## License
+
+This package is released under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Issues
+
+If you encounter any issues or have suggestions for improvement, please open an issue on the [GitHub repository](https://github.com/John-Salama/AQI).
+
+## Author
+
+- John Salama
+
+## Contributing
+
+If you'd like to contribute to this project, feel free to submit a pull request. Your contributions are welcome!
+
+---
+
+Feel free to customize this README according to your preferences and add any additional information that you think would be relevant for users of your package.
