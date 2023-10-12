@@ -6,22 +6,22 @@ Certainly, I'll add information about the units of measurement for each gas and 
 
 ## Introduction
 
-The `aqi-calculator` package is a simple Node.js library that calculates the Air Quality Index (AQI) for various air pollutants, including CO (Carbon Monoxide), PM2.5 (Particulate Matter), O3 (Ozone), PM10 (Particulate Matter), SO2 (Sulfur Dioxide), NO2 (Nitrogen Dioxide), and Lead (Pb). It provides a straightforward interface for converting pollutant concentrations into their respective AQI values.
+The `aqi-pollutant-calculator` package is a simple Node.js library that calculates the Air Quality Index (AQI) for various air pollutants, including CO (Carbon Monoxide), PM2.5 (Particulate Matter), O3 (Ozone), PM10 (Particulate Matter), SO2 (Sulfur Dioxide), NO2 (Nitrogen Dioxide), and Lead (Pb). It provides a straightforward interface for converting pollutant concentrations into their respective AQI values.
 
 ## Installation
 
-To install `aqi-calculator` in your Node.js project, you can use npm:
+To install `aqi-pollutant-calculator` in your Node.js project, you can use npm:
 
 ```bash
-npm install aqi-calculator
+npm install aqi-pollutant-calculator
 ```
 
 ## Usage
 
-Here's how you can use the `aqi-calculator` library in your Node.js code:
+Here's how you can use the `aqi-pollutant-calculator` library in your Node.js code:
 
 ```javascript
-const aqi = require("aqi-calculator");
+const aqi = require("aqi-pollutant-calculator");
 
 // Calculate the AQI for a specific pollutant concentration
 const coAQI = aqi.CO_AQI(4.0); // Concentration in ppm
@@ -62,7 +62,7 @@ The package provides functions for calculating the AQI for individual pollutants
 
 ## AQI Ranges
 
-The `aqi-calculator` package uses the following AQI breakpoints and values for each pollutant:
+The `aqi-pollutant-calculator` package uses the following AQI breakpoints and values for each pollutant:
 
 - CO AQI:
 
@@ -104,7 +104,7 @@ This package is released under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Issues
 
-If you encounter any issues or have suggestions for improvement, please open an issue on the [GitHub repository](https://github.com/John-Salama/aqi-calculator).
+If you encounter any issues or have suggestions for improvement, please open an issue on the [GitHub repository](https://github.com/John-Salama/aqi-pollutant-calculator).
 
 ## Author
 
