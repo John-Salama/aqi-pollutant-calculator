@@ -6,22 +6,22 @@ Certainly, I'll add information about the units of measurement for each gas and 
 
 ## Introduction
 
-The `aqi` package is a simple Node.js library that calculates the Air Quality Index (AQI) for various air pollutants, including CO (Carbon Monoxide), PM2.5 (Particulate Matter), O3 (Ozone), PM10 (Particulate Matter), SO2 (Sulfur Dioxide), NO2 (Nitrogen Dioxide), and Lead (Pb). It provides a straightforward interface for converting pollutant concentrations into their respective AQI values.
+The `aqi-calculator` package is a simple Node.js library that calculates the Air Quality Index (AQI) for various air pollutants, including CO (Carbon Monoxide), PM2.5 (Particulate Matter), O3 (Ozone), PM10 (Particulate Matter), SO2 (Sulfur Dioxide), NO2 (Nitrogen Dioxide), and Lead (Pb). It provides a straightforward interface for converting pollutant concentrations into their respective AQI values.
 
 ## Installation
 
-To install `aqi` in your Node.js project, you can use npm:
+To install `aqi-calculator` in your Node.js project, you can use npm:
 
 ```bash
-npm install aqi
+npm install aqi-calculator
 ```
 
 ## Usage
 
-Here's how you can use the `aqi` library in your Node.js code:
+Here's how you can use the `aqi-calculator` library in your Node.js code:
 
 ```javascript
-const aqi = require("air-quality-index");
+const aqi = require("aqi-calculator");
 
 // Calculate the AQI for a specific pollutant concentration
 const coAQI = aqi.CO_AQI(4.0); // Concentration in ppm
@@ -62,7 +62,7 @@ The package provides functions for calculating the AQI for individual pollutants
 
 ## AQI Ranges
 
-The `aqi` package uses the following AQI breakpoints and values for each pollutant:
+The `aqi-calculator` package uses the following AQI breakpoints and values for each pollutant:
 
 - CO AQI:
 
@@ -98,34 +98,13 @@ The `aqi` package uses the following AQI breakpoints and values for each polluta
   - Breakpoints: [0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4]
   - AQI Values: [0, 50, 100, 150, 200, 300, 400, 500]
 
-## Example
-
-Here's an example of how to calculate the AQI for multiple pollutants and compute the overall AQI:
-
-```javascript
-const aqi = require("air-quality-index");
-
-const gasConcentration = {
-  co: 4.0, // Concentration in ppm
-  pm25: 15.0, // Concentration in µg/m³
-  ozone: 70.0, // Concentration in ppb
-  pm10: 30.0, // Concentration in µg/m³
-  so2: 20.0, // Concentration in ppb
-  no2: 40.0, // Concentration in ppb
-  lead: 0.2, // Concentration in µg/m³
-};
-
-const overallAQI = aqi.calculateAQI(gasConcentration);
-console.log("Overall AQI:", overallAQI);
-```
-
 ## License
 
 This package is released under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Issues
 
-If you encounter any issues or have suggestions for improvement, please open an issue on the [GitHub repository](https://github.com/John-Salama/AQI).
+If you encounter any issues or have suggestions for improvement, please open an issue on the [GitHub repository](https://github.com/John-Salama/aqi-calculator).
 
 ## Author
 

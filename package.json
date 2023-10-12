@@ -1,5 +1,5 @@
 {
-  "name": "air-quality-index",
+  "name": "aqi-calculator",
   "version": "1.0.0",
   "description": "Calculate Air Quality Index (AQI)",
   "main": "index.js",
