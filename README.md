@@ -1,5 +1,3 @@
-Certainly, I'll add information about the units of measurement for each gas and the suggested unit in the README. Here's the updated README with the added information:
-
 # aqi - Calculate Air Quality Index (AQI)
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
