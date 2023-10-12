@@ -21,7 +21,7 @@ npm install aqi
 Here's how you can use the `aqi` library in your Node.js code:
 
 ```javascript
-const aqi = require("aqi");
+const aqi = require("air-quality-index");
 
 // Calculate the AQI for a specific pollutant concentration
 const coAQI = aqi.CO_AQI(4.0); // Concentration in ppm
@@ -103,7 +103,7 @@ The `aqi` package uses the following AQI breakpoints and values for each polluta
 Here's an example of how to calculate the AQI for multiple pollutants and compute the overall AQI:
 
 ```javascript
-const aqi = require("aqi");
+const aqi = require("air-quality-index");
 
 const gasConcentration = {
   co: 4.0, // Concentration in ppm
