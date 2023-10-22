@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/John-Salama/aqi-pollutant-calculator"
   },
-  "types": "./types/aqi.d.ts",
+  "types": "./types/AQI.d.ts",
   "keywords": [
     "AQI",
     "air quality",
