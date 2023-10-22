@@ -39,6 +39,59 @@ const overallAQI = aqi.calculateAQI(gasConcentration);
 console.log("Overall AQI:", overallAQI);
 ```
 
+It can also be used in TypeScript:
+
+```typescript
+import { O3_AQI, calculateAQI } from "aqi-pollutant-calculator";
+
+// Calculate the AQI for a specific pollutant concentration
+const coAQI: number = O3_AQI(25.0); // Concentration in ppb
+console.log("CO AQI:", coAQI);
+// Calculate the overall AQI for a set of gas concentrations
+const gasConcentration: {
+  co: number;
+  pm25: number;
+  ozone: number;
+  pm10: number;
+  so2: number;
+  no2: number;
+  lead: number;
+} = {
+  co: 4.0, // Concentration in ppm
+  pm25: 15.0, // Concentration in µg/m³
+  ozone: 70.0, // Concentration in ppb
+  pm10: 30.0, // Concentration in µg/m³
+  so2: 20.0, // Concentration in ppb
+  no2: 40.0, // Concentration in ppb
+  lead: 0.2, // Concentration in µg/m³
+};
+const overallAQI: number = calculateAQI(gasConcentration);
+console.log("Overall AQI:", overallAQI);
+```
+
+And in ES6:
+
+```javascript
+import { CO_AQI, calculateAQI } from "aqi-pollutant-calculator";
+
+// Calculate the AQI for a specific pollutant concentration
+const coAQI = CO_AQI(4.0); // Concentration in ppm
+console.log("CO AQI:", coAQI);
+
+// Calculate the overall AQI for a set of gas concentrations
+const gasConcentration = {
+  co: 4.0, // Concentration in ppm
+  pm25: 15.0, // Concentration in µg/m³
+  ozone: 70.0, // Concentration in ppb
+  pm10: 30.0, // Concentration in µg/m³
+  so2: 20.0, // Concentration in ppb
+  no2: 40.0, // Concentration in ppb
+  lead: 0.2, // Concentration in µg/m³
+};
+const overallAQI = calculateAQI(gasConcentration);
+console.log("Overall AQI:", overallAQI);
+```
+
 The package provides functions for calculating the AQI for individual pollutants as well as a function for computing the overall AQI based on multiple pollutant concentrations.
 
 ## Supported Pollutants
